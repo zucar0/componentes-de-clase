@@ -5,6 +5,9 @@ class App extends Component {
   static defaultProps = {
     name: 'Toño',
   };
+
+  static propTypes = {};
+
   render() {
     console.log(this.props);
     return <p>Hola, componente de clase</p>;
