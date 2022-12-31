@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 class App extends Component {
+  static defaultProps = {
+    name: 'Toño',
+  };
   render() {
     console.log(this.props);
     return <p>Hola, componente de clase</p>;
