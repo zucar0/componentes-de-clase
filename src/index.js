@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import PropTypes from 'prop-types';
 
+let Example = (props) => {
+  let [contador, setContador] = useState(0);
+  useEffect(() => {
+    console.log('Fui actualizado');
+    return () => {
+      alert('bye');
+    };
+  }, []);
+  return (
+    <>
+      <p>
+        <span>Contador: {contador}</span>
+      </p>
+      <button onClick={setContador(contador + 1)}>Sumar</button>
+    </>
+  );
+};
+
 class App extends Component {
   static defaultProps = {
     name: 'Toño',
