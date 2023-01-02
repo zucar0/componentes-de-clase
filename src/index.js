@@ -26,6 +26,11 @@ class App extends Component {
         <p>
           <span>Contador: {this.state.contador}</span>
         </p>
+        <button
+          onClick={() => this.setState({ contador: this.state.contador + 1 })}
+        >
+          Sumar
+        </button>
       </>
     );
   }
