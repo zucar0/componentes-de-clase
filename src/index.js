@@ -18,6 +18,25 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    console.log('Fuí creado');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevState, this.state);
+    if (prevState.contador !== this.state.contador)
+      this.setState({
+        updatedAt: new Date(),
+      });
+    console.log('Fui actualizado');
+  }
+
+  componentWillUnmount() {}
+
+  getSnapshotBeforeUpdate() {
+    console.log('Antes del DOM');
+  }
+
   updateCounter = () => {
     this.setState({ contador: this.state.contador + 1 });
   };
